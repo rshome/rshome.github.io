@@ -1,147 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ricky Shome | Software Testing Consultant</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background: #f4f4f4;
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Linkedin, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function Portfolio() {
+  const highlights = [
+    {
+      title: "IXICO PLC",
+      desc: "Built UI & API automation frameworks, reducing regression time by ~50%.",
+      logo: "https://logo.clearbit.com/ixico.com"
+    },
+    {
+      title: "NTT Data",
+      desc: "Automated Dynamics 365 flows, cutting regression time by ~70%.",
+      logo: "https://logo.clearbit.com/nttdata.com"
+    },
+    {
+      title: "RBS",
+      desc: "Led cloud migration testing, saving ~13% in forecasted costs.",
+      logo: "https://logo.clearbit.com/rbs.com"
+    },
+    {
+      title: "Lloyds Bank",
+      desc: "Delivered award‑winning mobile testing project at European Software Testing Awards.",
+      logo: "https://logo.clearbit.com/lloydsbank.com"
+    },
+    {
+      title: "Microsoft",
+      desc: "Worked on large‑scale enterprise software testing, strengthening automation strategies and ensuring product quality at scale.",
+      logo: "https://logo.clearbit.com/microsoft.com"
+    },
+    {
+      title: "Barclays Investment Bank",
+      desc: "Managed Office 365 rollout testing, resolving 600+ compatibility issues across the enterprise.",
+      logo: "https://logo.clearbit.com/barclays.com"
     }
+  ];
 
-    header {
-      background: #0a0a23;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900 p-6">
+      {/* Header */}
+      <header className="max-w-5xl mx-auto text-center mb-12">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold mb-4"
+        >
+          Ricky Shome
+        </motion.h1>
+        <p className="text-lg text-gray-600">
+          Software Testing Consultant • Lead Test Engineer • SDET
+        </p>
+      </header>
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+      {/* About Section */}
+      <section className="max-w-4xl mx-auto mb-16">
+        <Card className="p-6 rounded-2xl shadow-md">
+          <CardContent>
+            <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+            <p className="text-gray-700 leading-relaxed">
+              I help enterprises cut software testing time and costs through
+              scalable automation frameworks. With over 20 years of experience
+              across finance, healthcare, e‑commerce, and telco, I specialize in
+              automation, QA leadership, and test strategy.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
 
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-    }
+      {/* Skills Section */}
+      <section className="max-w-5xl mx-auto mb-16">
+        <h2 className="text-2xl font-semibold mb-6 text-center">Key Skills</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {["Selenium", "Playwright", "SpecFlow", "Cucumber", "C#", "Java", "Azure", "AWS", "Dynamics 365", "CI/CD", "Postman", "SQL"].map(
+            (skill, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.05 }}
+                className="bg-white shadow rounded-2xl p-4 text-center"
+              >
+                {skill}
+              </motion.div>
+            )
+          )}
+        </div>
+      </section>
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background: white;
-    }
+      {/* Highlights Section */}
+      <section className="max-w-5xl mx-auto mb-16">
+        <h2 className="text-2xl font-semibold mb-6 text-center">Career Highlights</h2>
+        <div className="grid gap-6 md:grid-cols-3">
+          {highlights.map((item, i) => (
+            <Card key={i} className="p-6 rounded-2xl shadow-md flex items-center gap-4">
+              {item.logo && (
+                <img src={item.logo} alt={`${item.title} logo`} className="w-12 h-12 object-contain" />
+              )}
+              <CardContent className="p-0">
+                <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
+                <p className="text-gray-700">{item.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
 
-    section {
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      color: #0a0a23;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.5rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    .contact a {
-      color: #0a0a23;
-      text-decoration: none;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #eee;
-      color: #444;
-      padding: 0.3rem 0.6rem;
-      margin: 0.2rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #0a0a23;
-      color: white;
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Ricky Shome</h1>
-  <p>Lead Test Engineer | SDET | Software Testing Specialist</p>
-</header>
-
-<div class="container">
-  <section>
-    <h2>About Me</h2>
-    <p>Based in Watford, UK, I’m a seasoned test professional with 20+ years of experience in automation, QA leadership, and test strategy across sectors like finance, e-commerce, and telecommunications. I’ve delivered robust frameworks using tools such as Selenium, Playwright, and Azure DevOps while mentoring global QA teams and driving agile delivery.</p>
-  </section>
-
-  <section>
-    <h2>Technical Skills</h2>
-    <div>
-      <span class="badge">Selenium</span>
-      <span class="badge">Playwright</span>
-      <span class="badge">SpecFlow</span>
-      <span class="badge">Cucumber</span>
-      <span class="badge">Azure</span>
-      <span class="badge">AWS</span>
-      <span class="badge">C#</span>
-      <span class="badge">Java</span>
-      <span class="badge">Postman</span>
-      <span class="badge">GitHub</span>
-      <span class="badge">EasyRepro</span>
-      <span class="badge">Dynamics 365</span>
-      <span class="badge">CI/CD</span>
-      <span class="badge">SQL</span>
+      {/* Contact Section */}
+      <section className="max-w-4xl mx-auto text-center">
+        <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
+        <div className="flex justify-center gap-6">
+          <Button variant="outline" asChild>
+            <a href="mailto:ricky.shome@gmail.com" className="flex items-center gap-2">
+              <Mail className="w-4 h-4" /> Email
+            </a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="tel:+447812190590" className="flex items-center gap-2">
+              <Phone className="w-4 h-4" /> Call
+            </a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a
+              href="https://www.linkedin.com/in/rickyshome"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <Linkedin className="w-4 h-4" /> LinkedIn
+            </a>
+          </Button>
+        </div>
+      </section>
     </div>
-  </section>
-
-  <section>
-    <h2>Career Highlights</h2>
-    <ul>
-      <li><strong>IXICO PLC</strong>: Built automation frameworks from scratch for UI and APIs, reducing regression testing time by 50%.</li>
-      <li><strong>NTT Data</strong>: Automated Dynamics 365 key business flows, slashing regression time by 70%.</li>
-      <li><strong>RBS</strong>: Led cloud migration testing, achieving 13% forecasted cost savings.</li>
-      <li><strong>Microsoft</strong>: Handled over 600 compatibility issues during Office 365 rollout at Barclays Investment Bank.</li>
-      <li><strong>Lloyds Bank</strong>: Won Best Mobile Project award at the European Software Testing Awards.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Certifications & Education</h2>
-    <ul>
-      <li>Certified Scrum Master (CSM)</li>
-      <li>Microsoft Azure Fundamentals</li>
-      <li>Certified Security Testing Professional</li>
-      <li>ISEB Software Testing Foundation</li>
-      <li>Exec Leadership – Oxford, Said Business School</li>
-      <li>MSc – Advanced Manufacturing and IT (University of Surrey)</li>
-      <li>BEng (Hons) – Engineering (University of Bath)</li>                                                    
-    </ul>
-  </section>
-
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ricky.shome@gmail.com">ricky.shome@gmail.com</a></p>
-    <p>Phone: <a href="tel:+447812190590">+44 7812 190590</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/rickyshome/" target="_blank">linkedin.com/in/rickyshome</a></p>
-  </section>
-</div>
-
-<footer>
-  &copy; 2025 Ricky Shome. All rights reserved.
-</footer>
-
-</body>
-</html>
+  );
+}
