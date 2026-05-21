@@ -1,10 +1,22 @@
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <!-- London 2012 Olympics Official Logo -->
-  <!-- Purple jagged edge shape with yellow outline -->
+  <!-- The iconic geometric abstract interlocking design -->
   
-  <g>
-    <!-- Yellow outline stroke -->
-    <path d="M 40 80 L 50 60 L 60 70 L 70 50 L 80 65 L 90 45 L 100 70 L 110 45 L 120 65 L 130 50 L 140 70 L 150 60 L 160 80 L 150 90 L 160 110 L 150 120 L 160 140 L 140 150 L 120 140 L 110 155 L 90 145 L 80 160 L 70 145 L 60 160 L 50 145 L 40 150 L 20 140 L 30 120 L 20 110 L 30 90 Z" 
-          fill="#663399" stroke="#FFD700" stroke-width="6" stroke-linejoin="miter"/>
-  </g>
+  <!-- Blue shape (top left) -->
+  <polygon points="30,60 60,60 60,100 45,115 30,100" fill="#0066FF"/>
+  
+  <!-- Pink shape (top right) -->
+  <polygon points="85,40 115,40 115,85 100,100 85,85" fill="#FF1493"/>
+  
+  <!-- Yellow shape (middle right) -->
+  <polygon points="130,65 160,65 160,110 145,125 130,110" fill="#FFD700"/>
+  
+  <!-- Green shape (bottom left) -->
+  <polygon points="30,115 60,100 75,115 60,130 45,130" fill="#00AA44"/>
+  
+  <!-- Orange shape (bottom middle) -->
+  <polygon points="85,105 115,90 130,105 115,120 100,120" fill="#FF8800"/>
+  
+  <!-- Purple shape (bottom right) -->
+  <polygon points="145,125 160,110 175,125 160,140 145,140" fill="#9933FF"/>
 </svg>
