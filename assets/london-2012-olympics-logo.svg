@@ -1,22 +1,16 @@
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- London 2012 Olympics Logo -->
-  <!-- The iconic "2012" design with the Olympic rings integrated -->
+  <!-- London 2012 Olympics Official Logo -->
+  <!-- The iconic abstract geometric design with interlocking shapes -->
   
-  <!-- Background circle -->
-  <circle cx="100" cy="100" r="95" fill="none" stroke="#0066cc" stroke-width="2"/>
+  <!-- Blue shape (represents 2) -->
+  <path d="M 30 60 L 70 60 L 70 100 L 50 100 L 50 140 L 30 140 Z" fill="#0066FF"/>
   
-  <!-- Main "2012" text styled like the official logo -->
-  <g id="olympics-2012">
-    <!-- The design incorporates the abstract geometric style of the actual logo -->
-    <text x="100" y="130" font-size="80" font-weight="bold" text-anchor="middle" fill="#0066cc" font-family="Arial, sans-serif" letter-spacing="-2">2012</text>
-  </g>
+  <!-- Red/Purple shape (represents 0) -->
+  <ellipse cx="90" cy="100" rx="25" ry="40" fill="none" stroke="#FF0000" stroke-width="8"/>
   
-  <!-- Olympic rings -->
-  <g id="olympic-rings" opacity="0.6">
-    <circle cx="60" cy="50" r="8" fill="none" stroke="#0066cc" stroke-width="2"/>
-    <circle cx="100" cy="50" r="8" fill="none" stroke="#0066cc" stroke-width="2"/>
-    <circle cx="140" cy="50" r="8" fill="none" stroke="#0066cc" stroke-width="2"/>
-    <circle cx="80" cy="62" r="8" fill="none" stroke="#0066cc" stroke-width="2"/>
-    <circle cx="120" cy="62" r="8" fill="none" stroke="#0066cc" stroke-width="2"/>
-  </g>
+  <!-- Yellow shape (represents 1) -->
+  <rect x="130" y="60" width="15" height="80" fill="#FFD700"/>
+  
+  <!-- Pink/Magenta shape (represents 2) -->
+  <path d="M 155 60 L 185 60 L 185 100 L 165 100 L 165 140 L 155 140 Z" fill="#FF1493"/>
 </svg>
